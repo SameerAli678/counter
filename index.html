@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>counter</title>
+  </head>
+
+  <body>
+    <div class="flex justify-center items-center p-[220px]">
+      <div
+        class="flex flex-col gap-y-[20px] w-[250px] h-[250px] bg-blue-500 justify-center items-center text-white rounded-xl"
+      >
+        <div
+          class="flex flex-col w-[300px] h-[200px] bg-black justify-center items-center gap-x-[20px]"
+        >
+          <div class="flex justify-center items-center">
+            <h1 class="text-white pb-[40px]" id="num"></h1>
+          </div>
+
+          <div class="flex justify-center items-center pb-[px] gap-x-6">
+            <button
+              class="w-14 h-[30px] bg-blue-500 justify-center items-center rounded-sm onclick"
+              onclick="sub()"
+            >
+              -
+            </button>
+            <button
+              class="flex border-solid border-4 border-blue-700 w-14 h-7 justify-center items-center onclick"
+              onclick="refresh()"
+            >
+              0
+            </button>
+            <button
+              class="w-14 h-[30px] bg-blue-500 justify-center items-center rounded-sm"
+              onclick="add()"
+            >
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Sub</button> -->
+    <!-- <input type="password"> -->
+
+    <script>
+      let count = 0;
+
+      var display = document.getElementById("num");
+
+      function add() {
+        display.innerHTML = count++;
+      }
+
+      function sub() {
+        display.innerHTML = count--;
+      }
+      function refresh() {
+        display.innerHTML = count = 0;
+      }
+
+      // var count = 0
+
+      // function sub() {
+      //     return count <= 0 ?
+      // return count - 1
+      //  : count
+      // }
+
+      // function add() {
+      //     return count >= 10 ?  return count + 1 : count
+      // }
+      // console.log(count);
+      // let a = ""
+      // if (a) { alert(hy) }
+    </script>
+  </body>
+</html>
